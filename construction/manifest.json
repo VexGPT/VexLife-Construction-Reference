@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "vexlife.construction-reference.foundation-manifest/v1",
+  "repositoryRef": "github.repo.VexGPT.VexLife-Construction-Reference",
+  "state": "FOUNDATION_BOOTSTRAP_CANDIDATE",
+  "semanticAuthority": false,
+  "workClaimRef": "github.issue.VexGPT.VexLife-Construction-Reference.1",
+  "targetBinding": {
+    "branch": "main",
+    "baseHead": "302f13b3d860904f1b834f2ad6dc11a5810542d8",
+    "baseRoot": [
+      {
+        "path": "LICENSE",
+        "blob": "71d6cc5e819bc54508bd05c51e5404dd6f4c9505"
+      }
+    ]
+  },
+  "canonicalMeaningOwner": {
+    "repository": "vgong24/VexLife",
+    "blueprintRef": "blueprint.vexlife.universal.001"
+  },
+  "constructionSource": {
+    "repository": "vgong24/Vextreme-SDK",
+    "acceptedCommit": "c6ed74697f02bd06b6807d00ead4dbd8cd0cbb2e",
+    "featureThreadRef": "github.issue.vextreme-sdk.1839",
+    "currentizationPrRef": "github.pull.vextreme-sdk.1855",
+    "contractPath": "docs/private-continuity/vexlife-blueprint-source-of-truth/CONSTRUCTION-CONTRACT.json",
+    "contractBlob": "adcc33fffade1ee42ef252e2716c3e38acf63c94",
+    "currentPath": "docs/private-continuity/vexlife-blueprint-source-of-truth/CURRENT.json",
+    "currentBlob": "29097daf33a80e8e446ed7a6ae52a4cf38ed3623",
+    "milestonesPath": "docs/private-continuity/vexlife-blueprint-source-of-truth/MILESTONES.json",
+    "milestonesBlob": "e3ca802df65b0069f3297f1e1afbfa2e61f0ab4d"
+  },
+  "targetProfile": {
+    "profileRef": "profile.vlbsot.dotnet-csharp-reference.net10.001",
+    "runtimeFamily": "DOTNET",
+    "runtimeMajorMinor": "10.0",
+    "targetFramework": "net10.0",
+    "language": "CSHARP",
+    "languageVersion": "14.0",
+    "projectKind": "CLASS_LIBRARY",
+    "osSpecificTarget": false,
+    "uiFrameworkOrNull": null,
+    "providerFrameworkOrNull": null,
+    "externalPackagePolicy": "NONE_REQUIRED_FOR_FOUNDATION_BOOTSTRAP"
+  },
+  "bootstrapPaths": [
+    ".gitignore",
+    "README.md",
+    "AGENTS.md",
+    "docs/CULTURE.md",
+    "docs/foundation/INDEX.md",
+    "construction/manifest.json",
+    "src/VexLife.ConstructionReference/VexLife.ConstructionReference.csproj"
+  ],
+  "excludedAtBootstrap": [
+    "PLAY_PAUSE_FEATURE_CODE",
+    "BEHAVIOR_FOUNDATION_CODE",
+    "PORTABLE_BEHAVIOR_SEMANTIC_LAW_INVENTION",
+    "UI_FRAMEWORK",
+    "PROVIDER_ADAPTER",
+    "WHOLE_REPOSITORY_GENERATION",
+    "SEMANTIC_EQUIVALENCE_CLAIM",
+    "NATIVE_PROVIDER_CONFORMANCE_CLAIM"
+  ],
+  "proof": {
+    "buildCommand": "dotnet build src/VexLife.ConstructionReference/VexLife.ConstructionReference.csproj --configuration Release",
+    "cleanStatusCommand": "git status --porcelain --untracked-files=all",
+    "expectedCleanStatusOutput": "",
+    "requiredIgnorePatterns": [
+      "**/bin/",
+      "**/obj/"
+    ],
+    "semanticParityClaim": false,
+    "featureTestsRequired": false
+  },
+  "ownership": {
+    "bootstrapGeneratedThenTargetOwned": [
+      ".gitignore",
+      "README.md",
+      "AGENTS.md",
+      "docs/CULTURE.md",
+      "docs/foundation/INDEX.md",
+      "src/VexLife.ConstructionReference/VexLife.ConstructionReference.csproj"
+    ],
+    "derivedProvenanceRequiresReviewedRefresh": [
+      "construction/manifest.json"
+    ],
+    "law": "GENERATOR_MAY_BOOTSTRAP_REPOSITORY_CULTURE_BUT_GENERATOR_IS_NOT_PERMANENT_REPOSITORY_CULTURE_OWNER"
+  },
+  "nextExternalEdgeRef": "edge.vlbsot.portable-behavior-contract-formation"
+}
