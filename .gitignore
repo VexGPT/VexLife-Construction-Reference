@@ -1,0 +1,3 @@
+# .NET build and intermediate output are not source.
+**/bin/
+**/obj/
