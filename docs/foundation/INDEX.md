@@ -65,6 +65,14 @@ git status = empty
 
 ## Next semantic edge
 
-The next product-semantic edge is **not owned by this foundation**.
+The current edge is P6 target publication acceptance for the exact generated Play/Pause contract-data bytes above.
 
-Portable Behavior remains a VexLife-owned contract formation/acceptance problem before Behavior or Play/Pause semantics can be realized here.
+Portable Play/Pause meaning is already accepted in VexLife and is not reopened here. This source does not claim P7.
+
+After exact P6 target acceptance, the next proof stage is:
+
+```text
+P7_CSHARP_COMPILE_AND_NEGATIVE_TYPE_PROOF
+```
+
+P8 semantic-law parity, P9 semantic graph/hash parity, and native/provider proof remain later independent claims.
