@@ -133,11 +133,11 @@
     "prRef": "github.pull.VexGPT.VexLife-Construction-Reference.6",
     "baseHead": "a3af7297c37d0e773bbce1975032091ceff42b68",
     "runtimePath": "src/VexLife.ConstructionReference/VexStream/Playback/VexStreamPlaybackSemanticRuntime.cs",
-    "runtimeSha256": "31edcb13f733964707d502557a16d9f7ca71e942dedcb4afa1cf0fcc024ebd7f",
+    "runtimeSha256": "66adead9475f4eab1b490dae4e2e4c2b47dc5d308a289c6f44bacfcbcb382692",
     "proofProjectPath": "tests/VexLife.ConstructionReference.SemanticProof/VexLife.ConstructionReference.SemanticProof.csproj",
-    "proofProjectSha256": "5719f9ac6c2d239529d725198853092fbd96adc666fe68ebb33244f01d9c717c",
+    "proofProjectSha256": "efd73da1c14910f20c176fdedf75104dc8898110563b58c60605be82264d6acf",
     "proofProgramPath": "tests/VexLife.ConstructionReference.SemanticProof/Program.cs",
-    "proofProgramSha256": "ebd823cbf5d2888620929280949cbb41e31648a2d9aada75a2ca2056b4a25c8c",
+    "proofProgramSha256": "fc84b389f8d4c539d9a91e340443c388ee852cb229b1e67a9a3b7e26825b7cca",
     "portableLawRows": 19,
     "executableProofCases": 23,
     "buildCommand": "dotnet build src/VexLife.ConstructionReference/VexLife.ConstructionReference.csproj --configuration Release",
@@ -146,6 +146,14 @@
     "providerFrameworkOrNull": null,
     "providerEffectsPerformed": false,
     "semanticAuthority": false,
-    "nativeProviderProofClaimed": false
+    "nativeProviderProofClaimed": false,
+    "sourceByteCustodyCorrection": {
+      "reason": "TEMPORARY_LIBRARY_BRIDGE_DROPPED_FINAL_NEWLINE_BEFORE_GIT_BLOB_FORMATION",
+      "semanticSourceChanged": false,
+      "runtimeGitBlob": "dbeb502842020994c896018cbcd5eed4d31691b3",
+      "proofProjectGitBlob": "2b4e763334121942aede578e5888595b06905348",
+      "proofProgramGitBlob": "f745a1fb8d5092cb5323f1fbf41e0520ed9e0050",
+      "correctedToCommittedBytes": true
+    }
   }
 }
