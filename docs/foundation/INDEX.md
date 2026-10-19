@@ -25,7 +25,7 @@ native adapter selection = accepted/current
 selected UI framework = .NET MAUI 10.0.110
 selected provider adapter = CommunityToolkit.Maui.MediaElement 10.0.0 / IMediaElement
 selected first lived target = Mac Catalyst
-executable native adapter source = absent
+executable native adapter source = candidate pending proof
 ```
 
 That absence is intentional.
@@ -68,18 +68,14 @@ git status = empty
 
 ## Next semantic edge
 
-The native adapter selection is accepted/current.
+PR #12 is the current target-native source candidate.
 
-The next target edge is **target-native source admission** under a separate work claim:
+Source acceptance requires both:
 
 ```text
-accepted pure C# semantic runtime
--> accepted .NET MAUI / IMediaElement adapter selection
--> admit smallest MAUI + MediaElement source membrane
--> compile adapter contract/tests
--> then run one Mac Catalyst lived provider proof
+NativeAdapterProof = PASS
+Mac Catalyst MAUI build = PASS
+repository source view = clean
 ```
 
-The source edge must keep semantic Projection above provider state, preserve pending-intent reconciliation, and fail closed on held Failed/Stopped observations.
-
-No executable native source is authorized merely by selection currentness.
+Lived MediaElement/AVPlayer behavior remains a separate later proof.
