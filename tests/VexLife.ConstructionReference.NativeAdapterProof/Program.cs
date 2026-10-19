@@ -11,6 +11,7 @@ static class Proof
     public static async Task<int> RunAsync()
     {
         await PlayPauseAcknowledgementFlow();
+        await RapidOppositeIntentReplacement();
         await RestartFlow();
         await HeldProviderObservations();
         await NoMediaAndOpenedBoundaries();
@@ -61,6 +62,35 @@ static class Proof
         port.Emit(VexStreamPlaybackMediaObservationKind.Paused);
         Equal(VexStreamPlaybackPendingIntent.None, connection.State.PendingIntent, "paused acknowledges pause");
         Equal(VexStreamPlaybackProjection.PlayAvailable, connection.Projection, "paused -> play available");
+    }
+
+    static async Task RapidOppositeIntentReplacement()
+    {
+        var port = new FakeMediaPort();
+        using var connection = new VexStreamPlaybackMediaConnection(port);
+
+        port.Emit(VexStreamPlaybackMediaObservationKind.MediaOpened);
+
+        var play = await connection.ActivatePlayPauseAsync();
+        Equal(VexStreamPlaybackEffect.RequestPlay, play.Effect, "rapid play effect");
+        Equal(VexStreamPlaybackPendingIntent.RequestPlay, connection.State.PendingIntent, "rapid play pending");
+
+        var pause = await connection.ActivatePlayPauseAsync();
+        Equal(VexStreamPlaybackEffect.RequestPause, pause.Effect, "rapid opposite pause effect");
+        Equal(VexStreamPlaybackPendingIntent.RequestPause, connection.State.PendingIntent, "rapid opposite replaces pending play");
+        Equal(
+            VexStreamPlaybackSemanticRuntime.AdmittedIntentReplacesPendingProviderAcknowledgement,
+            pause.Admission,
+            "rapid opposite admission");
+        Sequence(new[] { "PLAY", "PAUSE" }, port.Operations, "rapid opposite operations");
+
+        port.Emit(VexStreamPlaybackMediaObservationKind.Playing);
+        Equal(VexStreamPlaybackPendingIntent.RequestPause, connection.State.PendingIntent, "stale playing preserves newer pause intent");
+        Equal(false, connection.State.PlayRequested, "stale playing preserves newer pause request");
+
+        port.Emit(VexStreamPlaybackMediaObservationKind.Paused);
+        Equal(VexStreamPlaybackPendingIntent.None, connection.State.PendingIntent, "paused acknowledges newer pause intent");
+        Equal(VexStreamPlaybackProjection.PlayAvailable, connection.Projection, "rapid opposite settled projection");
     }
 
     static async Task RestartFlow()
