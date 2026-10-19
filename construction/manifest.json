@@ -1,7 +1,7 @@
 {
   "schemaVersion": "vexlife.construction-reference.foundation-manifest/v1",
   "repositoryRef": "github.repo.VexGPT.VexLife-Construction-Reference",
-  "state": "P10_NATIVE_ADAPTER_SELECTION_TERMINAL_ACCEPTED_CURRENT__SOURCE_ADMISSION_HELD",
+  "state": "P10_NATIVE_SOURCE_CANDIDATE_PENDING_PROOF",
   "semanticAuthority": false,
   "workClaimRef": "github.issue.VexGPT.VexLife-Construction-Reference.1",
   "targetBinding": {
@@ -87,7 +87,7 @@
     ],
     "law": "GENERATOR_MAY_BOOTSTRAP_REPOSITORY_CULTURE_BUT_GENERATOR_IS_NOT_PERMANENT_REPOSITORY_CULTURE_OWNER"
   },
-  "nextExternalEdgeRef": "edge.vlbsot.p10.native-ui-provider-source-admission",
+  "nextExternalEdgeRef": "edge.vlbsot.p10.native-ui-provider-source-proof",
   "p6PlayPauseContractData": {
     "stageRef": "stage.vlbsot.deterministic-csharp-generation.001",
     "state": "TERMINAL_ACCEPTED_CURRENT",
@@ -279,10 +279,38 @@
       "https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/views/mediaelement",
       "https://www.nuget.org/packages/CommunityToolkit.Maui.MediaElement/10.0.0"
     ],
-    "sourceAdmissionAuthorized": false,
+    "sourceAdmissionAuthorized": true,
     "nativeProviderProofClaimed": false,
     "acceptedMerge": "78549b8991883b63cf55f36266616a77656807a7",
     "acceptedTree": "c88af6b4490656af001e0c044fa2656671ab66b9",
     "currentizationPrRef": "github.pull.VexGPT.VexLife-Construction-Reference.10"
+  },
+  "nativeSourceAdmission": {
+    "state": "SOURCE_CANDIDATE_PENDING_PROOF",
+    "workClaimRef": "github.issue.VexGPT.VexLife-Construction-Reference.11",
+    "prRef": "github.pull.VexGPT.VexLife-Construction-Reference.12",
+    "baseHead": "050ef8c9b8f8f70327de6bbcbf9b0edea5ee9bc3",
+    "selectionRef": "selection.vlbsot.p10.maui-mediaelement.play-pause.001",
+    "pureAdapterPaths": [
+      "src/VexLife.ConstructionReference/VexStream/Playback/Native/VexStreamPlaybackMediaPort.cs",
+      "src/VexLife.ConstructionReference/VexStream/Playback/Native/VexStreamPlaybackMediaConnection.cs"
+    ],
+    "proofPaths": [
+      "tests/VexLife.ConstructionReference.NativeAdapterProof/VexLife.ConstructionReference.NativeAdapterProof.csproj",
+      "tests/VexLife.ConstructionReference.NativeAdapterProof/Program.cs"
+    ],
+    "mauiProject": "src/VexLife.ConstructionReference.Maui/VexLife.ConstructionReference.Maui.csproj",
+    "firstLivedTarget": "MAC_CATALYST",
+    "runtimeIdentifier": "maccatalyst-arm64",
+    "uiFramework": "Microsoft.Maui.Controls 10.0.110",
+    "providerPackage": "CommunityToolkit.Maui.MediaElement 10.0.0",
+    "sourceMutationPerformed": true,
+    "sourceAdmissionAuthorized": true,
+    "nativeProviderProofClaimed": false,
+    "proofRequirements": [
+      "NATIVE_ADAPTER_CONTRACT_PROOF_PASS",
+      "MAC_CATALYST_BUILD_PASS",
+      "REPOSITORY_SOURCE_CLEAN"
+    ]
   }
 }
