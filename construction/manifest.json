@@ -1,7 +1,7 @@
 {
   "schemaVersion": "vexlife.construction-reference.foundation-manifest/v1",
   "repositoryRef": "github.repo.VexGPT.VexLife-Construction-Reference",
-  "state": "FOUNDATION_BOOTSTRAP_CANDIDATE",
+  "state": "FOUNDATION_BOOTSTRAP_ACCEPTED_CURRENT",
   "semanticAuthority": false,
   "workClaimRef": "github.issue.VexGPT.VexLife-Construction-Reference.1",
   "targetBinding": {
@@ -87,5 +87,38 @@
     ],
     "law": "GENERATOR_MAY_BOOTSTRAP_REPOSITORY_CULTURE_BUT_GENERATOR_IS_NOT_PERMANENT_REPOSITORY_CULTURE_OWNER"
   },
-  "nextExternalEdgeRef": "edge.vlbsot.portable-behavior-contract-formation"
+  "nextExternalEdgeRef": "edge.vlbsot.p7.csharp-compile-and-negative-type-proof",
+  "p6PlayPauseContractData": {
+    "stageRef": "stage.vlbsot.deterministic-csharp-generation.001",
+    "state": "TARGET_PUBLICATION_CANDIDATE",
+    "workClaimRef": "github.issue.VexGPT.VexLife-Construction-Reference.3",
+    "baseHead": "d81ec34279d3bdbba0d6d92e8515b90907cf95c2",
+    "outputPath": "src/VexLife.ConstructionReference/VexStream/Playback/VexStreamPlaybackContract.g.cs",
+    "outputSha256": "0671e98db75cf7c038ead6b6c9187731a0f01115a3189b361a044238ff31da34",
+    "outputBytes": 22926,
+    "generatorRef": "generator.vlbsot.vexstream-playback.csharp-reference.v1",
+    "acceptedSdkMapping": {
+      "repository": "vgong24/Vextreme-SDK",
+      "prRef": "github.pull.vextreme-sdk.1865",
+      "merge": "d4847c410330607b86323a4d641ee92f006d5a28"
+    },
+    "canonicalMeaning": {
+      "repository": "vgong24/VexLife",
+      "contractRef": "contract.vexlife.vexstream.playback.play-pause.001",
+      "acceptedMain": "be1c4856c2bceeda007b9e4ba7c42afe662ffae2",
+      "contractPath": "blueprint/fragments/behavior-contracts/vexstream-playback-play-pause.json",
+      "contractBlob": "8b09e92d32eecc2f0036e9c8e3d4a1719e730eab"
+    },
+    "androidEvidence": {
+      "parityRef": "proof.vlbsot.p5.android-reconstruction-parity.vexstream-playback-play-pause.001"
+    },
+    "portableLawRowCount": 19,
+    "semanticAuthority": false,
+    "uiFrameworkOrNull": null,
+    "providerFrameworkOrNull": null,
+    "p7CompileAndNegativeTypeProof": "NOT_YET_CLAIMED",
+    "p8SemanticLawParity": "NOT_YET_CLAIMED",
+    "p9SemanticGraphOrHashParity": "NOT_YET_CLAIMED",
+    "p10NativeUiProviderProof": "HELD"
+  }
 }
