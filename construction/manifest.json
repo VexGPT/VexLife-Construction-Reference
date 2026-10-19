@@ -1,7 +1,7 @@
 {
   "schemaVersion": "vexlife.construction-reference.foundation-manifest/v1",
   "repositoryRef": "github.repo.VexGPT.VexLife-Construction-Reference",
-  "state": "P10_CSHARP_SEMANTIC_RUNTIME_CANDIDATE",
+  "state": "P10_CSHARP_SEMANTIC_RUNTIME_TERMINAL_ACCEPTED_CURRENT__NATIVE_ADAPTER_SELECTION_HELD",
   "semanticAuthority": false,
   "workClaimRef": "github.issue.VexGPT.VexLife-Construction-Reference.1",
   "targetBinding": {
@@ -87,7 +87,7 @@
     ],
     "law": "GENERATOR_MAY_BOOTSTRAP_REPOSITORY_CULTURE_BUT_GENERATOR_IS_NOT_PERMANENT_REPOSITORY_CULTURE_OWNER"
   },
-  "nextExternalEdgeRef": "edge.vlbsot.p10.csharp-semantic-runtime-exact-head-proof",
+  "nextExternalEdgeRef": "edge.vlbsot.p10.native-adapter-selection",
   "p6PlayPauseContractData": {
     "stageRef": "stage.vlbsot.deterministic-csharp-generation.001",
     "state": "TERMINAL_ACCEPTED_CURRENT",
@@ -128,7 +128,7 @@
     "p9ProofRef": "proof.vlbsot.p9.semantic-graph-hash-parity.vexstream-playback-play-pause.001"
   },
   "p10CSharpSemanticRuntime": {
-    "state": "SOURCE_CANDIDATE_CORRECTED_PENDING_HOST_PROOF",
+    "state": "TERMINAL_ACCEPTED_CURRENT",
     "workClaimRef": "github.issue.VexGPT.VexLife-Construction-Reference.5",
     "prRef": "github.pull.VexGPT.VexLife-Construction-Reference.6",
     "baseHead": "a3af7297c37d0e773bbce1975032091ceff42b68",
@@ -166,6 +166,32 @@
       "proofProgramChanged": false,
       "providerOrUiBoundaryChanged": false,
       "evidenceRef": "github.pull.VexGPT.VexLife-Construction-Reference.6"
-    }
+    },
+    "acceptedMerge": "299edaf0c3d701c80aa88198de48af8bceb7d78d",
+    "acceptedTree": "34eae6e5cec00d5b8da3243d5286a3cee243a649",
+    "proofRef": "proof.vlbsot.p10.csharp-semantic-runtime.001",
+    "sourceOwnerAttemptRef": "attempt.vlbsot.p10.csharp-semantic-runtime-source-owner.a008",
+    "sourceOwnerOuterReturnSha256": "c378ccae12ac4346b86022994f3b65dedbdb3a914d228af3a02482ff2711e8eb",
+    "sourceOwnerInnerReturnSha256": "b6a8da281335472a55edb8b634370c82f9e39dbb216c55ead480c374bd0e0e3f",
+    "dotnetVersion": "10.0.113",
+    "compilerControl": "PASS",
+    "acceptedBaseBuild": "PASS",
+    "candidateBuild": "PASS",
+    "semanticLawProof": "PASS",
+    "repositoryClean": true,
+    "currentizationPrRef": "github.pull.VexGPT.VexLife-Construction-Reference.7"
+  },
+  "nativeAdapterSelection": {
+    "state": "HELD_NOT_YET_EARNED",
+    "uiFrameworkOrNull": null,
+    "providerFrameworkOrNull": null,
+    "providerAdapterOrNull": null,
+    "requiredBeforeNativeProof": [
+      "TARGET_NATIVE_UI_REALIZATION_SELECTED",
+      "TARGET_NATIVE_PROVIDER_REALIZATION_SELECTED",
+      "TARGET_ADAPTER_MAPPING_ACCEPTED",
+      "TARGET_NATIVE_SOURCE_ADMITTED",
+      "LIVED_NATIVE_PROVIDER_PROOF_SURFACE_AVAILABLE"
+    ]
   }
 }
