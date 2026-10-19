@@ -230,6 +230,56 @@ nativeProviderProof=false
 
 Selection acceptance does not add MAUI source, XAML, packages, native provider effects or a native/provider PASS claim.
 
+## Native source admission candidate
+
+The accepted adapter selection now has one bounded target-owned source candidate on PR #12.
+
+```text
+provider-free adapter seam:
+  src/VexLife.ConstructionReference/VexStream/Playback/Native/
+    VexStreamPlaybackMediaPort.cs
+    VexStreamPlaybackMediaConnection.cs
+
+adapter-contract proof:
+  tests/VexLife.ConstructionReference.NativeAdapterProof/
+
+Mac Catalyst host:
+  src/VexLife.ConstructionReference.Maui/
+```
+
+Dependency direction:
+
+```text
+semantic State / Projection
+  -> VexStreamPlaybackMediaConnection
+  -> IVexStreamPlaybackMediaPort
+  -> concrete MediaElementPlaybackPort
+  -> IMediaElement / MediaElement
+  -> AVPlayer on Mac Catalyst
+```
+
+The semantic runtime stays provider-free. Opening/Buffering produce no semantic observation. Failed and unexpected Stopped create held provider findings. The concrete wrapper defers MediaElement's Stopped transition by one dispatcher turn because MediaElement 10.0.0 sets Stopped immediately before raising MediaEnded; explicit MediaEnded cancels that deferred Stopped classification.
+
+The MAUI page uses a custom Play/Pause button whose text/enabled state comes only from `VexStreamPlaybackProjection`. Platform playback controls are disabled.
+
+First source proof gates:
+
+```text
+dotnet run --project tests/VexLife.ConstructionReference.NativeAdapterProof/... -c Release
+  -> P10_NATIVE_ADAPTER_CONTRACT_PROOF PASS
+
+dotnet build src/VexLife.ConstructionReference.Maui/VexLife.ConstructionReference.Maui.csproj
+  -f net10.0-maccatalyst
+  -c Release
+  -p:RuntimeIdentifier=maccatalyst-arm64
+  -> PASS
+
+git status --porcelain --untracked-files=all
+  -> empty
+```
+
+A green source build still does not prove a lived MediaElement/AVPlayer loop.
+
 ## Boundary
 
 The repository may own its target-native representation, readability, build organization, and target-specific improvements.
