@@ -128,12 +128,12 @@
     "p9ProofRef": "proof.vlbsot.p9.semantic-graph-hash-parity.vexstream-playback-play-pause.001"
   },
   "p10CSharpSemanticRuntime": {
-    "state": "SOURCE_CANDIDATE_PENDING_HOST_PROOF",
+    "state": "SOURCE_CANDIDATE_CORRECTED_PENDING_HOST_PROOF",
     "workClaimRef": "github.issue.VexGPT.VexLife-Construction-Reference.5",
     "prRef": "github.pull.VexGPT.VexLife-Construction-Reference.6",
     "baseHead": "a3af7297c37d0e773bbce1975032091ceff42b68",
     "runtimePath": "src/VexLife.ConstructionReference/VexStream/Playback/VexStreamPlaybackSemanticRuntime.cs",
-    "runtimeSha256": "66adead9475f4eab1b490dae4e2e4c2b47dc5d308a289c6f44bacfcbcb382692",
+    "runtimeSha256": "5dd1d9f202f690918780eda965cd46868249011f6bfce391f4ce2aaa30f7dcb4",
     "proofProjectPath": "tests/VexLife.ConstructionReference.SemanticProof/VexLife.ConstructionReference.SemanticProof.csproj",
     "proofProjectSha256": "efd73da1c14910f20c176fdedf75104dc8898110563b58c60605be82264d6acf",
     "proofProgramPath": "tests/VexLife.ConstructionReference.SemanticProof/Program.cs",
@@ -154,6 +154,18 @@
       "proofProjectGitBlob": "2b4e763334121942aede578e5888595b06905348",
       "proofProgramGitBlob": "f745a1fb8d5092cb5323f1fbf41e0520ed9e0050",
       "correctedToCommittedBytes": true
+    },
+    "sourceCorrection": {
+      "findingRef": "source-finding.vlbsot.p10.csharp-semantic-runtime.cs0136-local-shadowing.001",
+      "sourcePath": "src/VexLife.ConstructionReference/VexStream/Playback/VexStreamPlaybackSemanticRuntime.cs",
+      "diagnostic": "CS0136",
+      "lineAtFinding": 113,
+      "cause": "ENDED_BRANCH_LOCAL_NEXT_SHADOWED_LATER_ENCLOSING_PLAYAVAILABLE_LOCAL_NEXT",
+      "correction": "RENAME_ENDED_BRANCH_LOCAL_NEXT_TO_RESTART_NEXT",
+      "semanticBehaviorChanged": false,
+      "proofProgramChanged": false,
+      "providerOrUiBoundaryChanged": false,
+      "evidenceRef": "github.pull.VexGPT.VexLife-Construction-Reference.6"
     }
   }
 }
