@@ -27,10 +27,13 @@ VexGPT/VexLife-Construction-Reference
 
 ```text
 repository foundation bootstrap = ACCEPTED_CURRENT
-Play/Pause C# contract data = P6_TARGET_PUBLICATION_CANDIDATE
+Play/Pause C# contract data = P6_TERMINAL_ACCEPTED_CURRENT
+P7 compile / negative-type proof = TERMINAL_ACCEPTED_CURRENT
+P8 semantic-law representation parity = TERMINAL_ACCEPTED_CURRENT
+P9 semantic graph/hash parity = TERMINAL_ACCEPTED_CURRENT
+P10 pure C# semantic runtime = SOURCE_CANDIDATE_PENDING_HOST_PROOF
 portable Behavior meaning = EXTERNAL_VEXLIFE_OWNED
 generated artifact sha256 = 0671e98db75cf7c038ead6b6c9187731a0f01115a3189b361a044238ff31da34
-P7 compile / negative-type proof = NOT YET CLAIMED
 UI framework = NOT SELECTED
 provider adapter = NOT PRESENT
 semantic equivalence = NOT CLAIMED
@@ -114,6 +117,27 @@ this repository
 ```
 
 Those bytes preserve the accepted Control / Act / Effect / Projection identities and 19 portable semantic-law rows as C# contract data. They do not yet prove compilation, semantic parity, or native/provider behavior.
+
+## Pure C# semantic runtime candidate
+
+The next admitted target slice is intentionally provider-free:
+
+```text
+src/VexLife.ConstructionReference/VexStream/Playback/VexStreamPlaybackSemanticRuntime.cs
+tests/VexLife.ConstructionReference.SemanticProof/
+```
+
+It realizes the accepted Play/Pause Control / Act / Effect / pending-intent / provider-observation reconciliation / Projection relationships as executable C# while keeping provider effects outside the runtime.
+
+The proof runner is dependency-free and names all 19 accepted portable law rows. It executes 23 cases so multi-valued pending-intent conditions are checked separately.
+
+```text
+candidate != accepted runtime
+runtime build/test != native provider proof
+pure semantic observation input != MediaElement / AVPlayer / Media3
+```
+
+The source remains a candidate until exact-head .NET 10 build + proof-runner evidence is accepted.
 
 ## Boundary
 
