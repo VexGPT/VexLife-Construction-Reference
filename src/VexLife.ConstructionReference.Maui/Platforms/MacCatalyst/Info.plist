@@ -27,12 +27,5 @@
             </array>
         </dict>
     </dict>
-    <key>UIBackgroundModes</key>
-    <array>
-        <string>bluetooth-central</string>
-        <string>audio</string>
-    </array>
-    <key>NSLocalNetworkUsageDescription</key>
-    <string>Required by the selected MediaElement Mac Catalyst provider integration.</string>
 </dict>
 </plist>
