@@ -21,9 +21,11 @@ foundation-owned feature implementation = absent
 P6 Play/Pause C# contract data = accepted/current
 P10 pure C# semantic runtime = accepted/current
 Behavior foundation implementation = bounded Play/Pause semantic runtime candidate only
-UI framework = absent
-provider adapter = absent
-external package requirement = absent
+native adapter selection = candidate
+candidate UI framework = .NET MAUI 10.0.110
+candidate provider adapter = CommunityToolkit.Maui.MediaElement 10.0.0 / IMediaElement
+candidate first lived target = Mac Catalyst
+executable native adapter source = absent
 ```
 
 That absence is intentional.
@@ -66,18 +68,17 @@ git status = empty
 
 ## Next semantic edge
 
-The pure C# semantic runtime is accepted/current.
-
-The next target edge is **native adapter selection**, not another semantic-runtime rewrite:
+The current target edge is review of the native adapter selection candidate:
 
 ```text
-accepted portable Play/Pause meaning
--> accepted C# contract data
--> accepted pure C# semantic runtime
--> select target-native UI/provider realization from current target semantics
--> source-address the adapter mapping
--> only then admit native source and lived provider proof
+accepted pure C# semantic runtime
+-> candidate .NET MAUI 10 UI host
+-> candidate CommunityToolkit.Maui.MediaElement / IMediaElement provider adapter
+-> candidate Mac Catalyst first lived proof
+-> selection review/currentness
+-> only then target-native source admission
 ```
 
-No target-native UI or provider framework is selected by this currentization. Android Compose/Media3 identities do not automatically map by name.
+Opening and Buffering remain transient provider states. MediaFailed and unexpected Stopped remain target-specific rather than silently becoming portable meaning.
 
+No MAUI/provider executable source is admitted by this selection candidate.
