@@ -34,9 +34,9 @@ P9 semantic graph/hash parity = TERMINAL_ACCEPTED_CURRENT
 P10 pure C# semantic runtime = TERMINAL_ACCEPTED_CURRENT
 portable Behavior meaning = EXTERNAL_VEXLIFE_OWNED
 generated artifact sha256 = 0671e98db75cf7c038ead6b6c9187731a0f01115a3189b361a044238ff31da34
-native adapter selection = TARGET_SELECTION_CANDIDATE
-candidate UI framework = .NET MAUI 10.0.110
-candidate provider adapter = CommunityToolkit.Maui.MediaElement 10.0.0 / IMediaElement
+native adapter selection = TERMINAL_ACCEPTED_CURRENT
+selected UI framework = .NET MAUI 10.0.110
+selected provider adapter = CommunityToolkit.Maui.MediaElement 10.0.0 / IMediaElement
 first lived target = Mac Catalyst
 semantic equivalence = NOT CLAIMED
 native/provider conformance = NOT CLAIMED
@@ -153,9 +153,9 @@ executableCases=23
 
 This acceptance still does not select a UI framework, provider framework, or native provider adapter.
 
-## Native adapter selection candidate
+## Native adapter selection — terminal accepted/current
 
-The first target-native adapter candidate descends from the accepted pure C# semantic runtime rather than from Android framework names.
+The first target-native adapter selection is accepted/current and descends from the accepted pure C# semantic runtime rather than from Android framework names.
 
 ```text
 selectionRef=selection.vlbsot.p10.maui-mediaelement.play-pause.001
@@ -176,7 +176,7 @@ transport UI:
   visible affordance driven by semantic VexStreamPlaybackProjection
 ```
 
-Candidate effect mapping:
+Accepted effect mapping:
 
 ```text
 RequestPlay    -> IMediaElement.Play()
@@ -185,7 +185,7 @@ RestartCurrent -> await IMediaElement.SeekTo(TimeSpan.Zero, cancellation)
                   then IMediaElement.Play()
 ```
 
-Candidate observation mapping:
+Accepted observation mapping:
 
 ```text
 Source absent / no media
@@ -217,9 +217,18 @@ Stopped outside initial-open handling
   -> HELD target-specific observation
 ```
 
-The first lived fixture candidate is an in-memory audio stream via `MediaSource.FromStream`. No network or product-storage semantics are required.
+The first lived proof fixture is an in-memory audio stream via `MediaSource.FromStream`. No network or product-storage semantics are required.
 
-This PR selects metadata only. It does not add MAUI source, XAML, packages, native provider effects or a native/provider PASS claim.
+Selection acceptance:
+
+```text
+selectionRef=selection.vlbsot.p10.maui-mediaelement.play-pause.001
+selectionMerge=78549b8991883b63cf55f36266616a77656807a7
+sourceAdmission=false
+nativeProviderProof=false
+```
+
+Selection acceptance does not add MAUI source, XAML, packages, native provider effects or a native/provider PASS claim.
 
 ## Boundary
 
