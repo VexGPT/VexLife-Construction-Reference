@@ -1,7 +1,7 @@
 {
   "schemaVersion": "vexlife.construction-reference.foundation-manifest/v1",
   "repositoryRef": "github.repo.VexGPT.VexLife-Construction-Reference",
-  "state": "P10_CSHARP_SEMANTIC_RUNTIME_TERMINAL_ACCEPTED_CURRENT__NATIVE_ADAPTER_SELECTION_HELD",
+  "state": "P10_NATIVE_ADAPTER_SELECTION_CANDIDATE",
   "semanticAuthority": false,
   "workClaimRef": "github.issue.VexGPT.VexLife-Construction-Reference.1",
   "targetBinding": {
@@ -87,7 +87,7 @@
     ],
     "law": "GENERATOR_MAY_BOOTSTRAP_REPOSITORY_CULTURE_BUT_GENERATOR_IS_NOT_PERMANENT_REPOSITORY_CULTURE_OWNER"
   },
-  "nextExternalEdgeRef": "edge.vlbsot.p10.native-adapter-selection",
+  "nextExternalEdgeRef": "edge.vlbsot.p10.native-adapter-selection-review",
   "p6PlayPauseContractData": {
     "stageRef": "stage.vlbsot.deterministic-csharp-generation.001",
     "state": "TERMINAL_ACCEPTED_CURRENT",
@@ -182,16 +182,104 @@
     "currentizationPrRef": "github.pull.VexGPT.VexLife-Construction-Reference.7"
   },
   "nativeAdapterSelection": {
-    "state": "HELD_NOT_YET_EARNED",
-    "uiFrameworkOrNull": null,
-    "providerFrameworkOrNull": null,
-    "providerAdapterOrNull": null,
-    "requiredBeforeNativeProof": [
-      "TARGET_NATIVE_UI_REALIZATION_SELECTED",
-      "TARGET_NATIVE_PROVIDER_REALIZATION_SELECTED",
-      "TARGET_ADAPTER_MAPPING_ACCEPTED",
-      "TARGET_NATIVE_SOURCE_ADMITTED",
-      "LIVED_NATIVE_PROVIDER_PROOF_SURFACE_AVAILABLE"
-    ]
+    "state": "TARGET_SELECTION_CANDIDATE",
+    "selectionRef": "selection.vlbsot.p10.maui-mediaelement.play-pause.001",
+    "workClaimRef": "github.issue.VexGPT.VexLife-Construction-Reference.8",
+    "prRef": "github.pull.VexGPT.VexLife-Construction-Reference.9",
+    "semanticHost": {
+      "proofRef": "proof.vlbsot.p10.csharp-semantic-runtime.001",
+      "acceptedMain": "a37798d98b1a9cd65d92028f12c7ef0d268ff01d"
+    },
+    "uiFramework": {
+      "family": "DOTNET_MAUI",
+      "version": "10.0.110",
+      "firstLivedTarget": "MAC_CATALYST",
+      "transportControl": "CUSTOM_PLAY_PAUSE",
+      "affordanceSource": "VexStreamPlaybackProjection",
+      "platformPlaybackControlsEnabled": false
+    },
+    "providerSurface": {
+      "package": "CommunityToolkit.Maui.MediaElement",
+      "packageVersion": "10.0.0",
+      "adapterApi": "CommunityToolkit.Maui.Core.IMediaElement",
+      "firstLivedPlatformProvider": "AVPlayer via MediaElement",
+      "semanticAuthority": false
+    },
+    "realizationMapping": [
+      {
+        "effectRef": "effect.vexstream.playback.request-play",
+        "providerOperation": "PLAY"
+      },
+      {
+        "effectRef": "effect.vexstream.playback.request-pause",
+        "providerOperation": "PAUSE"
+      },
+      {
+        "effectRef": "effect.vexstream.playback.restart-current",
+        "providerOperation": "SEEK_ZERO_THEN_PLAY"
+      }
+    ],
+    "observationMapping": [
+      {
+        "providerObservation": "NO_MEDIA",
+        "semanticObservation": "NoMedia",
+        "disposition": "MAPPED"
+      },
+      {
+        "providerObservation": "MEDIA_OPENED",
+        "semanticObservation": "Media(playRequested=false, playPauseAvailable=true)",
+        "disposition": "MAPPED_BOUNDED_PLAY_PAUSE_ONLY"
+      },
+      {
+        "providerObservation": "PLAYING",
+        "semanticObservation": "Media(playRequested=true, playPauseAvailable=true)",
+        "disposition": "MAPPED"
+      },
+      {
+        "providerObservation": "PAUSED",
+        "semanticObservation": "Media(playRequested=false, playPauseAvailable=true)",
+        "disposition": "MAPPED"
+      },
+      {
+        "providerObservation": "MEDIA_ENDED",
+        "semanticObservation": "Ended(restartAvailable=true)",
+        "disposition": "MAPPED"
+      },
+      {
+        "providerObservation": "OPENING",
+        "semanticObservation": null,
+        "disposition": "PLATFORM_SPECIFIC_TRANSIENT"
+      },
+      {
+        "providerObservation": "BUFFERING",
+        "semanticObservation": null,
+        "disposition": "PLATFORM_SPECIFIC_TRANSIENT"
+      },
+      {
+        "providerObservation": "FAILED",
+        "semanticObservation": null,
+        "disposition": "HELD_TARGET_FAILURE"
+      },
+      {
+        "providerObservation": "STOPPED_OUTSIDE_INITIAL_OPEN",
+        "semanticObservation": null,
+        "disposition": "HELD_TARGET_SPECIFIC"
+      }
+    ],
+    "proofFixture": {
+      "sourceKind": "IN_MEMORY_STREAM",
+      "sourceFactory": "MediaSource.FromStream",
+      "networkRequired": false,
+      "productStorageRequired": false,
+      "keepStreamAlive": true
+    },
+    "evidenceRefs": [
+      "https://dotnet.microsoft.com/en-us/platform/support/policy/maui",
+      "https://learn.microsoft.com/en-us/dotnet/maui/supported-platforms?view=net-maui-10.0",
+      "https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/views/mediaelement",
+      "https://www.nuget.org/packages/CommunityToolkit.Maui.MediaElement/10.0.0"
+    ],
+    "sourceAdmissionAuthorized": false,
+    "nativeProviderProofClaimed": false
   }
 }
