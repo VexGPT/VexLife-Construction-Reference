@@ -31,7 +31,7 @@ Play/Pause C# contract data = P6_TERMINAL_ACCEPTED_CURRENT
 P7 compile / negative-type proof = TERMINAL_ACCEPTED_CURRENT
 P8 semantic-law representation parity = TERMINAL_ACCEPTED_CURRENT
 P9 semantic graph/hash parity = TERMINAL_ACCEPTED_CURRENT
-P10 pure C# semantic runtime = SOURCE_CANDIDATE_PENDING_HOST_PROOF
+P10 pure C# semantic runtime = TERMINAL_ACCEPTED_CURRENT
 portable Behavior meaning = EXTERNAL_VEXLIFE_OWNED
 generated artifact sha256 = 0671e98db75cf7c038ead6b6c9187731a0f01115a3189b361a044238ff31da34
 UI framework = NOT SELECTED
@@ -137,7 +137,19 @@ runtime build/test != native provider proof
 pure semantic observation input != MediaElement / AVPlayer / Media3
 ```
 
-The source remains a candidate until exact-head .NET 10 build + proof-runner evidence is accepted.
+The pure C# semantic runtime is now accepted/current after exact-head SourceOwner A008 proved .NET 10 build success and all 19 accepted law rows through 23 executable cases.
+
+```text
+acceptedMerge=299edaf0c3d701c80aa88198de48af8bceb7d78d
+acceptedTree=34eae6e5cec00d5b8da3243d5286a3cee243a649
+proofRef=proof.vlbsot.p10.csharp-semantic-runtime.001
+dotnetVersion=10.0.113
+semanticLawProof=PASS
+portableLawRows=19
+executableCases=23
+```
+
+This acceptance still does not select a UI framework, provider framework, or native provider adapter.
 
 ## Boundary
 

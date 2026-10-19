@@ -19,7 +19,7 @@ This index explains the accepted repository foundation and the first bounded P6 
 ```text
 foundation-owned feature implementation = absent
 P6 Play/Pause C# contract data = accepted/current
-P10 pure C# semantic runtime = candidate pending exact-head build/law proof
+P10 pure C# semantic runtime = accepted/current
 Behavior foundation implementation = bounded Play/Pause semantic runtime candidate only
 UI framework = absent
 provider adapter = absent
@@ -66,15 +66,18 @@ git status = empty
 
 ## Next semantic edge
 
-The current target edge is the exact P10 **pure C# semantic-runtime candidate** on PR #6.
+The pure C# semantic runtime is accepted/current.
+
+The next target edge is **native adapter selection**, not another semantic-runtime rewrite:
 
 ```text
 accepted portable Play/Pause meaning
 -> accepted C# contract data
--> target-owned pure C# semantic runtime candidate
--> exact .NET 10 build
--> execute all 19 accepted law rows through the dependency-free proof runner
+-> accepted pure C# semantic runtime
+-> select target-native UI/provider realization from current target semantics
+-> source-address the adapter mapping
+-> only then admit native source and lived provider proof
 ```
 
-UI/provider realization remains held. A green semantic proof does not select MAUI, MediaElement, AVPlayer or any other native adapter.
+No target-native UI or provider framework is selected by this currentization. Android Compose/Media3 identities do not automatically map by name.
 
