@@ -18,8 +18,9 @@ This index explains the accepted repository foundation and the first bounded P6 
 
 ```text
 foundation-owned feature implementation = absent
-P6 Play/Pause C# contract data = candidate
-Behavior foundation implementation = absent
+P6 Play/Pause C# contract data = accepted/current
+P10 pure C# semantic runtime = candidate pending exact-head build/law proof
+Behavior foundation implementation = bounded Play/Pause semantic runtime candidate only
 UI framework = absent
 provider adapter = absent
 external package requirement = absent
@@ -65,14 +66,15 @@ git status = empty
 
 ## Next semantic edge
 
-The current edge is P6 target publication acceptance for the exact generated Play/Pause contract-data bytes above.
-
-Portable Play/Pause meaning is already accepted in VexLife and is not reopened here. This source does not claim P7.
-
-After exact P6 target acceptance, the next proof stage is:
+The current target edge is the exact P10 **pure C# semantic-runtime candidate** on PR #6.
 
 ```text
-P7_CSHARP_COMPILE_AND_NEGATIVE_TYPE_PROOF
+accepted portable Play/Pause meaning
+-> accepted C# contract data
+-> target-owned pure C# semantic runtime candidate
+-> exact .NET 10 build
+-> execute all 19 accepted law rows through the dependency-free proof runner
 ```
 
-P8 semantic-law parity, P9 semantic graph/hash parity, and native/provider proof remain later independent claims.
+UI/provider realization remains held. A green semantic proof does not select MAUI, MediaElement, AVPlayer or any other native adapter.
+

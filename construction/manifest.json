@@ -1,7 +1,7 @@
 {
   "schemaVersion": "vexlife.construction-reference.foundation-manifest/v1",
   "repositoryRef": "github.repo.VexGPT.VexLife-Construction-Reference",
-  "state": "FOUNDATION_BOOTSTRAP_ACCEPTED_CURRENT",
+  "state": "P10_CSHARP_SEMANTIC_RUNTIME_CANDIDATE",
   "semanticAuthority": false,
   "workClaimRef": "github.issue.VexGPT.VexLife-Construction-Reference.1",
   "targetBinding": {
@@ -87,10 +87,10 @@
     ],
     "law": "GENERATOR_MAY_BOOTSTRAP_REPOSITORY_CULTURE_BUT_GENERATOR_IS_NOT_PERMANENT_REPOSITORY_CULTURE_OWNER"
   },
-  "nextExternalEdgeRef": "edge.vlbsot.p7.csharp-compile-and-negative-type-proof",
+  "nextExternalEdgeRef": "edge.vlbsot.p10.csharp-semantic-runtime-exact-head-proof",
   "p6PlayPauseContractData": {
     "stageRef": "stage.vlbsot.deterministic-csharp-generation.001",
-    "state": "TARGET_PUBLICATION_CANDIDATE",
+    "state": "TERMINAL_ACCEPTED_CURRENT",
     "workClaimRef": "github.issue.VexGPT.VexLife-Construction-Reference.3",
     "baseHead": "d81ec34279d3bdbba0d6d92e8515b90907cf95c2",
     "outputPath": "src/VexLife.ConstructionReference/VexStream/Playback/VexStreamPlaybackContract.g.cs",
@@ -116,9 +116,56 @@
     "semanticAuthority": false,
     "uiFrameworkOrNull": null,
     "providerFrameworkOrNull": null,
-    "p7CompileAndNegativeTypeProof": "NOT_YET_CLAIMED",
-    "p8SemanticLawParity": "NOT_YET_CLAIMED",
-    "p9SemanticGraphOrHashParity": "NOT_YET_CLAIMED",
-    "p10NativeUiProviderProof": "HELD"
+    "p7CompileAndNegativeTypeProof": "TERMINAL_ACCEPTED_CURRENT",
+    "p8SemanticLawParity": "TERMINAL_ACCEPTED_CURRENT",
+    "p9SemanticGraphOrHashParity": "TERMINAL_ACCEPTED_CURRENT",
+    "p10NativeUiProviderProof": "HELD_PENDING_PURE_CSHARP_SEMANTIC_RUNTIME"
+  },
+  "vlbsotCurrentization": {
+    "sdkMain": "3d27a060ded5b3616f92d4cb06aa6fc57153a0eb",
+    "p7ProofRef": "proof.vlbsot.p7.csharp-compile-and-negative-type.001",
+    "p8ProofRef": "proof.vlbsot.p8.language-neutral-semantic-law-parity.vexstream-playback-play-pause.001",
+    "p9ProofRef": "proof.vlbsot.p9.semantic-graph-hash-parity.vexstream-playback-play-pause.001"
+  },
+  "p10CSharpSemanticRuntime": {
+    "state": "SOURCE_CANDIDATE_CORRECTED_PENDING_HOST_PROOF",
+    "workClaimRef": "github.issue.VexGPT.VexLife-Construction-Reference.5",
+    "prRef": "github.pull.VexGPT.VexLife-Construction-Reference.6",
+    "baseHead": "a3af7297c37d0e773bbce1975032091ceff42b68",
+    "runtimePath": "src/VexLife.ConstructionReference/VexStream/Playback/VexStreamPlaybackSemanticRuntime.cs",
+    "runtimeSha256": "5dd1d9f202f690918780eda965cd46868249011f6bfce391f4ce2aaa30f7dcb4",
+    "proofProjectPath": "tests/VexLife.ConstructionReference.SemanticProof/VexLife.ConstructionReference.SemanticProof.csproj",
+    "proofProjectSha256": "efd73da1c14910f20c176fdedf75104dc8898110563b58c60605be82264d6acf",
+    "proofProgramPath": "tests/VexLife.ConstructionReference.SemanticProof/Program.cs",
+    "proofProgramSha256": "fc84b389f8d4c539d9a91e340443c388ee852cb229b1e67a9a3b7e26825b7cca",
+    "portableLawRows": 19,
+    "executableProofCases": 23,
+    "buildCommand": "dotnet build src/VexLife.ConstructionReference/VexLife.ConstructionReference.csproj --configuration Release",
+    "proofCommand": "dotnet run --project tests/VexLife.ConstructionReference.SemanticProof/VexLife.ConstructionReference.SemanticProof.csproj --configuration Release",
+    "uiFrameworkOrNull": null,
+    "providerFrameworkOrNull": null,
+    "providerEffectsPerformed": false,
+    "semanticAuthority": false,
+    "nativeProviderProofClaimed": false,
+    "sourceByteCustodyCorrection": {
+      "reason": "TEMPORARY_LIBRARY_BRIDGE_DROPPED_FINAL_NEWLINE_BEFORE_GIT_BLOB_FORMATION",
+      "semanticSourceChanged": false,
+      "runtimeGitBlob": "dbeb502842020994c896018cbcd5eed4d31691b3",
+      "proofProjectGitBlob": "2b4e763334121942aede578e5888595b06905348",
+      "proofProgramGitBlob": "f745a1fb8d5092cb5323f1fbf41e0520ed9e0050",
+      "correctedToCommittedBytes": true
+    },
+    "sourceCorrection": {
+      "findingRef": "source-finding.vlbsot.p10.csharp-semantic-runtime.cs0136-local-shadowing.001",
+      "sourcePath": "src/VexLife.ConstructionReference/VexStream/Playback/VexStreamPlaybackSemanticRuntime.cs",
+      "diagnostic": "CS0136",
+      "lineAtFinding": 113,
+      "cause": "ENDED_BRANCH_LOCAL_NEXT_SHADOWED_LATER_ENCLOSING_PLAYAVAILABLE_LOCAL_NEXT",
+      "correction": "RENAME_ENDED_BRANCH_LOCAL_NEXT_TO_RESTART_NEXT",
+      "semanticBehaviorChanged": false,
+      "proofProgramChanged": false,
+      "providerOrUiBoundaryChanged": false,
+      "evidenceRef": "github.pull.VexGPT.VexLife-Construction-Reference.6"
+    }
   }
 }
