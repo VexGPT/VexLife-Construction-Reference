@@ -34,8 +34,10 @@ P9 semantic graph/hash parity = TERMINAL_ACCEPTED_CURRENT
 P10 pure C# semantic runtime = TERMINAL_ACCEPTED_CURRENT
 portable Behavior meaning = EXTERNAL_VEXLIFE_OWNED
 generated artifact sha256 = 0671e98db75cf7c038ead6b6c9187731a0f01115a3189b361a044238ff31da34
-UI framework = NOT SELECTED
-provider adapter = NOT PRESENT
+native adapter selection = TARGET_SELECTION_CANDIDATE
+candidate UI framework = .NET MAUI 10.0.110
+candidate provider adapter = CommunityToolkit.Maui.MediaElement 10.0.0 / IMediaElement
+first lived target = Mac Catalyst
 semantic equivalence = NOT CLAIMED
 native/provider conformance = NOT CLAIMED
 ```
@@ -150,6 +152,74 @@ executableCases=23
 ```
 
 This acceptance still does not select a UI framework, provider framework, or native provider adapter.
+
+## Native adapter selection candidate
+
+The first target-native adapter candidate descends from the accepted pure C# semantic runtime rather than from Android framework names.
+
+```text
+selectionRef=selection.vlbsot.p10.maui-mediaelement.play-pause.001
+
+UI framework:
+  .NET MAUI 10
+  current supported patch observed = 10.0.110
+  first lived target = Mac Catalyst
+
+provider surface:
+  CommunityToolkit.Maui.MediaElement 10.0.0
+  adapter API = IMediaElement
+  macOS provider realization = AVPlayer through MediaElement
+
+transport UI:
+  custom MAUI Play/Pause control
+  MediaElement platform playback controls disabled
+  visible affordance driven by semantic VexStreamPlaybackProjection
+```
+
+Candidate effect mapping:
+
+```text
+RequestPlay    -> IMediaElement.Play()
+RequestPause   -> IMediaElement.Pause()
+RestartCurrent -> await IMediaElement.SeekTo(TimeSpan.Zero, cancellation)
+                  then IMediaElement.Play()
+```
+
+Candidate observation mapping:
+
+```text
+Source absent / no media
+  -> semantic NoMedia
+
+MediaOpened
+  -> bounded Play/Pause ready-to-play observation
+  -> Media(playRequested=false, playPauseAvailable=true)
+  -> does not claim universal Stopped == Paused
+
+Playing
+  -> Media(playRequested=true, playPauseAvailable=true)
+
+Paused
+  -> Media(playRequested=false, playPauseAvailable=true)
+
+MediaEnded
+  -> Ended(restartAvailable=true)
+
+Opening / Buffering
+  -> target transient
+  -> do not clear or overwrite admitted pending intent
+
+Failed / MediaFailed
+  -> target-specific failure
+  -> fail the native proof rather than invent portable failure meaning
+
+Stopped outside initial-open handling
+  -> HELD target-specific observation
+```
+
+The first lived fixture candidate is an in-memory audio stream via `MediaSource.FromStream`. No network or product-storage semantics are required.
+
+This PR selects metadata only. It does not add MAUI source, XAML, packages, native provider effects or a native/provider PASS claim.
 
 ## Boundary
 
