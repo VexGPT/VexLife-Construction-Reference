@@ -110,7 +110,7 @@ public static class VexStreamPlaybackSemanticRuntime
         {
             if (state.Kind == VexStreamPlaybackSemanticKind.Ended)
             {
-                var next = state with
+                var restartNext = state with
                 {
                     PlayRequested = true,
                     PendingIntent = VexStreamPlaybackPendingIntent.RestartCurrent,
@@ -119,8 +119,8 @@ public static class VexStreamPlaybackSemanticRuntime
                     VexStreamPlaybackAct.Play,
                     VexStreamPlaybackEffect.RestartCurrent,
                     AdmittedIntentPendingProviderAcknowledgement,
-                    next,
-                    Project(next));
+                    restartNext,
+                    Project(restartNext));
             }
 
             var replacing = state.PendingIntent == VexStreamPlaybackPendingIntent.RequestPause;
