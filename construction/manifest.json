@@ -1,7 +1,7 @@
 {
   "schemaVersion": "vexlife.construction-reference.foundation-manifest/v1",
   "repositoryRef": "github.repo.VexGPT.VexLife-Construction-Reference",
-  "state": "P10_NATIVE_ADAPTER_SELECTION_CANDIDATE",
+  "state": "P10_NATIVE_ADAPTER_SELECTION_TERMINAL_ACCEPTED_CURRENT__SOURCE_ADMISSION_HELD",
   "semanticAuthority": false,
   "workClaimRef": "github.issue.VexGPT.VexLife-Construction-Reference.1",
   "targetBinding": {
@@ -87,7 +87,7 @@
     ],
     "law": "GENERATOR_MAY_BOOTSTRAP_REPOSITORY_CULTURE_BUT_GENERATOR_IS_NOT_PERMANENT_REPOSITORY_CULTURE_OWNER"
   },
-  "nextExternalEdgeRef": "edge.vlbsot.p10.native-adapter-selection-review",
+  "nextExternalEdgeRef": "edge.vlbsot.p10.native-ui-provider-source-admission",
   "p6PlayPauseContractData": {
     "stageRef": "stage.vlbsot.deterministic-csharp-generation.001",
     "state": "TERMINAL_ACCEPTED_CURRENT",
@@ -182,7 +182,7 @@
     "currentizationPrRef": "github.pull.VexGPT.VexLife-Construction-Reference.7"
   },
   "nativeAdapterSelection": {
-    "state": "TARGET_SELECTION_CANDIDATE",
+    "state": "TERMINAL_ACCEPTED_CURRENT",
     "selectionRef": "selection.vlbsot.p10.maui-mediaelement.play-pause.001",
     "workClaimRef": "github.issue.VexGPT.VexLife-Construction-Reference.8",
     "prRef": "github.pull.VexGPT.VexLife-Construction-Reference.9",
@@ -280,6 +280,9 @@
       "https://www.nuget.org/packages/CommunityToolkit.Maui.MediaElement/10.0.0"
     ],
     "sourceAdmissionAuthorized": false,
-    "nativeProviderProofClaimed": false
+    "nativeProviderProofClaimed": false,
+    "acceptedMerge": "78549b8991883b63cf55f36266616a77656807a7",
+    "acceptedTree": "c88af6b4490656af001e0c044fa2656671ab66b9",
+    "currentizationPrRef": "github.pull.VexGPT.VexLife-Construction-Reference.10"
   }
 }

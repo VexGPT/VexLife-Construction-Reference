@@ -21,10 +21,10 @@ foundation-owned feature implementation = absent
 P6 Play/Pause C# contract data = accepted/current
 P10 pure C# semantic runtime = accepted/current
 Behavior foundation implementation = bounded Play/Pause semantic runtime candidate only
-native adapter selection = candidate
-candidate UI framework = .NET MAUI 10.0.110
-candidate provider adapter = CommunityToolkit.Maui.MediaElement 10.0.0 / IMediaElement
-candidate first lived target = Mac Catalyst
+native adapter selection = accepted/current
+selected UI framework = .NET MAUI 10.0.110
+selected provider adapter = CommunityToolkit.Maui.MediaElement 10.0.0 / IMediaElement
+selected first lived target = Mac Catalyst
 executable native adapter source = absent
 ```
 
@@ -68,17 +68,18 @@ git status = empty
 
 ## Next semantic edge
 
-The current target edge is review of the native adapter selection candidate:
+The native adapter selection is accepted/current.
+
+The next target edge is **target-native source admission** under a separate work claim:
 
 ```text
 accepted pure C# semantic runtime
--> candidate .NET MAUI 10 UI host
--> candidate CommunityToolkit.Maui.MediaElement / IMediaElement provider adapter
--> candidate Mac Catalyst first lived proof
--> selection review/currentness
--> only then target-native source admission
+-> accepted .NET MAUI / IMediaElement adapter selection
+-> admit smallest MAUI + MediaElement source membrane
+-> compile adapter contract/tests
+-> then run one Mac Catalyst lived provider proof
 ```
 
-Opening and Buffering remain transient provider states. MediaFailed and unexpected Stopped remain target-specific rather than silently becoming portable meaning.
+The source edge must keep semantic Projection above provider state, preserve pending-intent reconciliation, and fail closed on held Failed/Stopped observations.
 
-No MAUI/provider executable source is admitted by this selection candidate.
+No executable native source is authorized merely by selection currentness.
